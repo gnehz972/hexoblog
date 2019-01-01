@@ -21,7 +21,9 @@ https://source.android.com/setup/build/downloading
 - 下载源码
 注意手机支持的分支,直接检出
 repo init -u https://android.googlesource.com/platform/manifest -b android-8.1.0_r47
+repo sync -j4
 查看repo当前检出分支 git --git-dir .repo/manifests/.git/ branch -a
+失败了不要紧，重新sync就好，之前下载的有缓存不会重头开始的
 
 - 下二进制文件（vendor的驱动）
 注意驱动对应的build number，而build bumber和之前检出的分支对应 **OPM7.181005.003	android-8.1.0_r47**
@@ -37,8 +39,8 @@ export PATH=$JAVA_HOME/bin:$PATH
 export LC_ALL=C
 
 - 编译源码
-build/envsetup.sh l
-unch aosp_angler-userdebug 
+build/envsetup.sh 
+lunch aosp_angler-userdebug 
 make -j4
 
 -  刷机 
