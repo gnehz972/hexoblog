@@ -53,25 +53,36 @@ lunch aosp_angler-userdebug
 make -j4
 ```
 
--  刷机 
+- 刷机 
 ```
 export ANDROID_PRODUCT_OUT=your-aosp-path/out/target/product/angler 
-fastboot flashash -w
+fastboot flashall -w
 ```
 
 
 ### 问题
 - 1、ninja: build stopped: subcommand failed ninja failed with: exit status 1 
 解决：可能是本地环境问题 export LC_ALL=C 
-ref： https://stackoverflow.com/questions/51324238/aosp-build-stopped-subcommand-failedhttps://www.programering.com/a/MDM3UzNwATQ.html LC_ALL=C is to remove all localized settings, make the correct execution.
+ref：https://stackoverflow.com/questions/51324238/aosp-build-stopped-subcommand-failedhttps://www.programering.com/a/MDM3UzNwATQ.html 
+> LC_ALL=C is to remove all localized settings, make the correct execution.
 
--  2、/bin/bash: xmllint: command not found 
-解决：安装xmllint sudo apt-get install libxml2-utils
+- 2、/bin/bash: xmllint: command not found 
+解决：安装xmllint 
+> sudo apt-get install libxml2-utils
 
--  3、Build with Jack .... Out of memory error GC overhead limit exceeded. Try increasing heap size with java option '-Xmx'. 
-解决：修改jack-server的配置文件 vim ~/.jack-settings 添加一行： JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4096m" 然后重启下jack-server prebuilts/sdk/tools/jack-admin kill-server prebuilts/sdk/tools/jack-admin start-server
-ref： http://www.2net.co.uk/blog/jack-server.html
+- 3、Build with Jack .... Out of memory error GC overhead limit exceeded. Try increasing heap size with java option '-Xmx'. 
+解决：修改jack-server的配置文件ref：http://www.2net.co.uk/blog/jack-server.html
+
+> vim ~/.jack-settings 
+添加一行：
+> JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4096m" 
+重启下jack-server:
+> prebuilts/sdk/tools/jack-admin kill-server 
+> prebuilts/sdk/tools/jack-admin start-server
 
 - 4、flash完后不断重启 
-可能原因： 1、binary文件只下了一个 2、没有下载对应build numer的binary文件 3、编译因为错误中断过，继续编译引起的。
+可能原因：
+1>、binary文件只下了一个 
+2>、没有下载对应build numer的binary文件 
+3>、编译因为错误中断过，继续编译引起的。
 解决：可能某些中间文件不完全或受损，把out文件夹删掉后再整编一次
