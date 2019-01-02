@@ -1,8 +1,15 @@
 ---
 title: Android实用快捷键
 date: 2017-07-04 23:58:46
-tags: Android
+tags: 
+- Android
+- tools
+categories:
+- tools
 ---
+Android开发实用快捷键收录，adb,aapt,android,fastboot
+命令行工具
+<!-- more -->
 ## adb
 - 查看屏幕尺寸/density
   ```adb shell wm size/density```

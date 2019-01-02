@@ -1,8 +1,17 @@
 ---
 title: kotlin coroutines学习摘要
 date: 2018-07-16 23:21:51
-tags:
+tags: 
+- kotlin
+- language
+- kotlin coroutine
+categories:
+- kotlin
 ---
+kotlin coroutines学习摘要。协程的定义及优缺点。kotlin coroutine关键字和概念的初步理解。在安卓开发下的应用场景及简单应用。
+入门级别。
+命令行工具
+<!-- more -->
 #### kotlin coroutines
 kotlin版的协程，比线程更轻量的异步任务操作实现。语言级别模拟实现“多线程”效果。
 

@@ -1,8 +1,16 @@
 ---
 title: 使用github page搭建hexo博客最佳实践
 date: 2017-07-02 16:16:26
-tags:
+tags: 
+- hexo
+- tools
+- h5
+- blog
+categories:
+- tools
 ---
+使用github page搭建hexo博客最佳实践。源文章和生成的h5分开管理，推送到各自的仓库。
+<!-- more -->
 **环境：**MacOs Git NodeJs
 **1. 创建github page repo [github page](https://pages.github.com/)**
 >注意repo name必须为你的用户名＋.github.io(*eg: gnehz972.github.io*)

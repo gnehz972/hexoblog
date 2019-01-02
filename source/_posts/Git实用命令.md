@@ -3,6 +3,8 @@ title: Git实用命令
 date: 2017-07-05 23:46:32
 tags:
 ---
+git实用命令，快捷键收录。
+<!-- more -->
 ## config
 - 配置用户名和邮箱
  `git config --global user.name "username"`

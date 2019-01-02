@@ -1,9 +1,15 @@
 ---
 title: Vim常用快捷键
 date: 2017-07-03 21:48:09
-tags:
+tags: 
+- vim
+- tools
+categories:
+- tools
 ---
-##  导航
+Vim常用快捷键,脱离鼠标操作。导航，编辑，搜索。
+<!-- more -->
+###  导航
 - h  左
 - j  下
 - k  上
@@ -23,17 +29,17 @@ tags:
 - ctrl + o: 快速返回上一次编辑的文件 ( o 意为 outer )
 - ctrl + i: 快速返回下一次编辑的文件 ( i 意为 inner )
 
-## 搜索
+### 搜索
 - /\cxxx 忽略大小写搜索 
 - /\Cxxx 精确搜索
 - n 继续搜索下一个
 - shift+n 搜索前一个
 - %s/原来的字符串/新字符串/  全局替换 
 
-## 选择
+### 选择
 shift + v， 然后上下左右移动。
 
-## 编辑
+### 编辑
 - i: 在光标前输入(insert)
 - a: 在光标后输入 (append / after)
 - shift+i: 在行首增加内容
