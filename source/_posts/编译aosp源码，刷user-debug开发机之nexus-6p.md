@@ -72,7 +72,6 @@ ref：https://stackoverflow.com/questions/51324238/aosp-build-stopped-subcommand
 
 - 3、Build with Jack .... Out of memory error GC overhead limit exceeded. Try increasing heap size with java option '-Xmx'. 
 解决：修改jack-server的配置文件ref：http://www.2net.co.uk/blog/jack-server.html
-
 > vim ~/.jack-settings 
 添加一行：
 > JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4096m" 
