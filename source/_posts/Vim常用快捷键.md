@@ -1,11 +1,12 @@
 ---
 title: Vim常用快捷键
-date: 2017-07-03 21:48:09
-tags: 
-- vim
-- tools
+tags:
+  - vim
+  - tools
 categories:
-- tools
+  - tools
+abbrlink: 58ea93b5
+date: 2017-07-03 21:48:09
 ---
 Vim常用快捷键,脱离鼠标操作。导航，编辑，搜索。
 <!-- more -->

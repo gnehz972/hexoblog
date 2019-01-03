@@ -1,12 +1,13 @@
 ---
 title: kotlin coroutines学习摘要
-date: 2018-07-16 23:21:51
-tags: 
-- kotlin
-- language
-- kotlin coroutine
+tags:
+  - kotlin
+  - language
+  - kotlin coroutine
 categories:
-- kotlin
+  - kotlin
+abbrlink: ec789f13
+date: 2018-07-16 23:21:51
 ---
 kotlin coroutines学习摘要。协程的定义及优缺点。kotlin coroutine关键字和概念的初步理解。在安卓开发下的应用场景及简单应用。
 入门级别。

@@ -1,11 +1,12 @@
 ---
 title: Android实用快捷键
-date: 2017-07-04 23:58:46
-tags: 
-- Android
-- tools
+tags:
+  - Android
+  - tools
 categories:
-- tools
+  - tools
+abbrlink: 4cbd63ec
+date: 2017-07-04 23:58:46
 ---
 Android开发实用快捷键收录，adb,aapt,android,fastboot
 命令行工具

@@ -1,11 +1,12 @@
 ---
 title: 编译aosp源码，刷user-debug开发机之nexus 6p
-date: 2019-01-01 15:28:46
-tags: 
-- 刷机
-- aosp
+tags:
+  - 刷机
+  - aosp
 categories:
-- android
+  - android
+abbrlink: c3525f2d
+date: 2019-01-01 15:28:46
 ---
 
 最近想研究下竞品app的页面，为了在真机上使用用hierarchyviewer工具，dump下数据库，就想起以前开发机的好处了。手上正好有个nexus 6p，完全可以自己编译aosp源码，刷个user-debug的开发机。毕竟系统都可以debug了，装在上面app就好更好揉捏了。

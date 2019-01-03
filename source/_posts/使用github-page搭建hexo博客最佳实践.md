@@ -1,13 +1,14 @@
 ---
 title: 使用github page搭建hexo博客最佳实践
-date: 2017-07-02 16:16:26
-tags: 
-- hexo
-- tools
-- h5
-- blog
+tags:
+  - hexo
+  - tools
+  - h5
+  - blog
 categories:
-- tools
+  - tools
+abbrlink: 85408c5b
+date: 2017-07-02 16:16:26
 ---
 使用github page搭建hexo博客最佳实践。源文章和生成的h5分开管理，推送到各自的仓库。
 <!-- more -->
