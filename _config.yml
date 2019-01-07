@@ -12,7 +12,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://ficusvirens.com
 root: /
 permalink: posts/:abbrlink.html 
 permalink_defaults:
@@ -78,6 +78,10 @@ deploy:
   type: git
   repo: https://github.com/gnehz972/gnehz972.github.io.git
   branch: master
+
+sitemap: 
+  url: https://ficusvirens.com
+  path: sitemap.xml
 
 # abbrlink config
 abbrlink:
