@@ -82,8 +82,6 @@ widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts
   - recent_comments
   - links
 
-url: https://ficusvirens.com
-
 links:
   - title: 酷壳
     url: https://coolshell.cn/
