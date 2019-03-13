@@ -1,5 +1,5 @@
 ---
-title: Android实用快捷键
+title: Android常用工具
 tags:
   - Android
   - tools
@@ -38,7 +38,8 @@ adb disable-verity
 adb reboot
 adb root
 adb shell mount  //查看挂载点
-adb shell mount -o remount,rw  -t ext4  /dev/block/dm-0 /system```
+adb shell mount -o remount,rw  -t ext4  /dev/block/dm-0 /system
+```
 
 ## aapt
 - 查看apk版本信息
@@ -70,7 +71,8 @@ fastboot flash boot boot.img
 fastboot flash system system.img
 fastboot flash userdata userdata.img
 fastboot flash custpack custpack.img
-fastboot reboot```
+fastboot reboot
+```
 
 ## others
 - 命令行查看apk签名  
@@ -80,4 +82,5 @@ fastboot reboot```
 ```-s，截取的包字节长度，默认情况下tcpdump会展示96字节的长度，要获取完整的长度可以用-s0或者-s1600
 -w 表示抓取的包保存的文件路径
 -v，展示更多的有用信息，还可以用-vv -vvv增加信息的展示量。
--p 将网络接口设置成非混杂模式```
+-p 将网络接口设置成非混杂模式
+```
