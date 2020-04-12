@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.Daylight.EzLinkAndroid.sit",
+    "sha256_cert_fingerprints":
+    ["86:63:3B:87:A1:DB:A1:85:12:45:D1:73:95:F3:93:A6:93:D6:94:52:2B:E2:84:E8:26:9A:4C:06:D1:3D:A9:8F"]
+  }
+}]
