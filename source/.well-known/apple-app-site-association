@@ -1,0 +1,35 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "P7X5DLRXKB.com.ezlink.EzLinkActivate",
+        "paths": [
+            "/ezlink/ewallet/detail",
+            "/ezlink/reward/home"
+        ]
+      },
+      {
+        "appID": "P6VCGSUT94.com.ezlink.EzLinkActivate.sit",
+        "paths": [
+            "/ezlink/ewallet/detail",
+            "/ezlink/reward/home"
+        ]
+      },
+      {
+        "appID": "P6VCGSUT94.com.ezlink.EzLinkActivate.qa",
+        "paths": [
+            "/ezlink/ewallet/detail",
+            "/ezlink/reward/home"
+        ]
+      },
+      {
+        "appID": "P6VCGSUT94.com.ezlink.EzLinkActivate.internal",
+        "paths": [
+            "/ezlink/ewallet/detail",
+            "/ezlink/reward/home"
+        ]
+      }
+    ]
+  }
+}
