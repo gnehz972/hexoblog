@@ -15,7 +15,7 @@ date: 2017-07-02 16:16:26
 **环境：**MacOs Git NodeJs
 **1. 创建github page repo [github page](https://pages.github.com/)**
 >注意repo name必须为你的用户名＋.github.io(*eg: gnehz972.github.io*)
->![image.png](http://upload-images.jianshu.io/upload_images/6722536-f59e83eae1bf73bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+>![image.png](./使用github-page搭建hexo博客最佳实践/githubio_repo.webp)
 
 **2. 安装hexo**
 ```
