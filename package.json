@@ -4,9 +4,6 @@
   "hexo": {
     "version": "5.4.2"
   },
-  "scripts": {
-    "g": "hexo g"
-  },
   "dependencies": {
     "hexo": "^5.4.0",
     "hexo-abbrlink": "^2.2.1",
