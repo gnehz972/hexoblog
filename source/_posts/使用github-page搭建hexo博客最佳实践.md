@@ -10,98 +10,84 @@ categories:
 abbrlink: 85408c5b
 date: 2017-07-02 16:16:26
 ---
-使用github page搭建hexo博客最佳实践。源文章和生成的h5分开管理，推送到各自的仓库。
+#### 概述
+使用github page + hexo搭建博客最佳实践。md文件和生成的博客网站文件分开管理，推送到各自的仓库保存。三步即可完成博客创建到发布并留档。
+1. `hexo new "new blog title"` 写md文件
+2. `hexo g -d` 生成静态博客网站文件并部署到github page
+3. `git commit -am "save" && git push` 推送md文件到github
 <!-- more -->
-**环境：**MacOs Git NodeJs
-**1. 创建github page repo [github page](https://pages.github.com/)**
+
+#### 环境：   
+- MacOs 
+- Git 
+- NodeJs
+- Hexo-cli
+
+#### 准备工作
+1. 安装NodeJs [NodeJs官网下载](https://nodejs.org/zh-cn/download/)
+2. 安装hexo-cli  
+```
+npm install -g hexo-cli
+```
+3. 创建一个普通 [github repo](https://github.com/gnehz972/hexoblog) 用来放md原始文件
+4. 创建github page repo，用来放生成的静态网页文件 [github page](https://pages.github.com/)
 >注意repo name必须为你的用户名＋.github.io(*eg: gnehz972.github.io*)
 >![image.png](./使用github-page搭建hexo博客最佳实践/githubio_repo.webp)
+#### 创建hexo工程开始写作
+1. 初始化hexo工程
+```
+hexo init hexoblog
+```
+2. 新建博客文章
+```
+hexo new "new blog"
+```
+会看到创建成功的md文件存放在./source/_posts/目录下，编辑md文件写blog，blabla...
+>INFO  Validating config  
+>INFO  Created: ~/dev/blog/hexoblog/source/_posts/new-blog.md
+3. 将md文件转换成静态网页文件，生成的网页文件位于./public/目录下
+```
+hexo generate
+```
+4. 本地预览网页
+```
+hexo server
+```
+可以看到以下信息，在浏览器访问http://localhost:4000/ 即可看到新建的博客页面
+>INFO  Validating config  
+>INFO  Start processing  
+>INFO  Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.
+#### 部署博客静态网页到github page
 
-**2. 安装hexo**
-```
-sudo npm install -g hexo-cli  
-```
-**3. 创建以repo命名的hexo工程**
-```
-hexo init gnehz972.github.io
-```
-**4. 本地验证**
-```
-hexo server    
-INFO  Start processing
-INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
-```
-**5. 创建新文章**
-```
-hexo new "first hexo blog"
-INFO  Created: ~/dev/hexo/gnehz972.github.io/source/_posts/first-hexo-blog.md
-```
-**6. 修改配置文件_config.yml，配置部署信息**
+1. 修改配置文件_config.yml，配置部署信息。这里配之前创建的github page repo信息
 ```
 deploy:
   type: git
   repo: https://github.com/gnehz972/gnehz972.github.io.git
   branch: master
 ```
-**7. 部署到github page**
+2. 部署到github page
 ```
-hexo generate
-hexo deploy
+hexo g -d
 ```
-**8. 验证部署，访问 [https://gnehz972.github.io/](https://gnehz972.github.io/)**
-**9. md源文件管理**
-hexo部署到站点的全是渲染过后的html文件，原始md文件没有上传。没有原始md文件，万一丢失或者想要在公司其他电脑上写文章，将很不方便。这里我又新建了一个[github repo](https://github.com/gnehz972/hexoblog)，将md文件纳入管理。
+3. 验证部署，访问 [https://gnehz972.github.io/](https://gnehz972.github.io/)
+#### md源文件管理
+1. 将hexoblog工程push到github即可
 ```
-cd gnehz972.github.io
-vim .gitignore
-```
-修改.gitignore文件
-```
-.DS_Store
-Thumbs.db
-db.json
-*.log
-node_modules/
-public/
-.deploy*/
-```
-添加到git管理
-```
+cd hexoblog
 git init 
 git remote add origin https://github.com/gnehz972/hexoblog.git
-git push -u origin master 
 git add .
-git commit  -am "add source"
-git push origin master
+git commit  -am "init repo"
+git push -u origin master 
 ```
-之后写hexo blog步骤就是
+#### 更换主题
+1. 添加hexo-theme-next主题
 ```
-hexo new "blog"
-hexo generate
-hexo deploy
-//back up original md file
-git commit -am "back up source file"
-git push origin master
+npm install hexo-theme-next
 ```
-**10. 主题管理**
-添加light主题
+2. 修改_config.yml配置文件theme
 ```
-git submodule add https://github.com/hexojs/hexo-theme-light.git themes/light
-git commit -am "add light"
-git submodule init
-git submodule update
+theme: next
 ```
-修改_config.yml配置文件theme
-```
-theme: light
-```
-**11. FAQ**
->安装hexo出现 "Cannot find module './build/Release/DTraceProviderBindings'"
-[reference](https://github.com/hexojs/hexo/issues/1922)
-解决方案（类似重装，莫名奇妙就好了－－＃）：
-$ npm install hexo --no-optional
-if it doesn't work
-try
-$ npm uninstall hexo-cli -g
-$ npm install hexo-cli -g
 
