@@ -17,7 +17,7 @@ date: 2017-07-02 16:16:26
 3. `git commit -am "save" && git push` 推送md文件到github
 <!-- more -->
 
-#### 环境：   
+#### 环境   
 - MacOs 
 - Git 
 - NodeJs
@@ -33,6 +33,7 @@ npm install -g hexo-cli
 4. 创建github page repo，用来放生成的静态网页文件 [github page](https://pages.github.com/)
 >注意repo name必须为你的用户名＋.github.io(*eg: gnehz972.github.io*)
 >![image.png](./使用github-page搭建hexo博客最佳实践/githubio_repo.webp)
+
 #### 创建hexo工程开始写作
 1. 初始化hexo工程
 ```
@@ -57,6 +58,7 @@ hexo server
 >INFO  Validating config  
 >INFO  Start processing  
 >INFO  Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.
+
 #### 部署博客静态网页到github page
 
 1. 修改配置文件_config.yml，配置部署信息。这里配之前创建的github page repo信息
@@ -71,6 +73,7 @@ deploy:
 hexo g -d
 ```
 3. 验证部署，访问 [https://gnehz972.github.io/](https://gnehz972.github.io/)
+
 #### md源文件管理
 1. 将hexoblog工程push到github即可
 ```
@@ -81,6 +84,7 @@ git add .
 git commit  -am "init repo"
 git push -u origin master 
 ```
+
 #### 更换主题
 1. 添加hexo-theme-next主题
 ```
