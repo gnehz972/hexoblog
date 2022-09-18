@@ -65,6 +65,10 @@ Coding
 - 添加导出Excel页面
   - 数据查询并后端生成excel
   - 添加下载交互
+- 登录
+  - 登录页面
+  - 登录auth认证
+  - 接口auth校验
 
 代码参看 [github](https://github.com/gnehz972/workday-next)
 
@@ -73,6 +77,7 @@ Coding
   - 注册Vercel账号并创建部署实例，绑定github repo
   - 配置预置的组员信息到环境变量
   - 配置Mongodb相关密钥到环境变量
+  - 配置登录密钥信息到环境变量
   - commit自动触发部署到 [work-day](https://workday-next.vercel.app/)
 
 交付
