@@ -1,9 +1,11 @@
 ---
 title: 给媳妇儿做项目之OA排班表
 tags:
-  - 默认
+  - NextJs
+  - Mongodb
+  - Typescript
 category:
-  - 默认
+  - Web
 abbrlink: dd496f02
 date: 2022-05-07 22:14:42
 ---
