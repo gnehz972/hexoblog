@@ -46,6 +46,8 @@ type: atom
 path: atom.xml
 limit: 20
 theme: next
+css:
+  - /css/custom.css 
 deploy:
   type: git
   repo: https://github.com/gnehz972/gnehz972.github.io.git
